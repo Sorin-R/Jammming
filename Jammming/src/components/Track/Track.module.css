@@ -1,0 +1,15 @@
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
+
+.track button {
+  background: none;
+  border: none;
+  color: #1db954;
+  font-size: 20px;
+  cursor: pointer;
+}

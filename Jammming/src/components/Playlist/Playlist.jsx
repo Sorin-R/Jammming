@@ -1,27 +1,20 @@
 import Tracklist from '../Tracklist/Tracklist';
+import styles from './Playlist.module.css';
 
 function Playlist({ name, tracks, onNameChange, onRemove, onSave }) {
-  return (
-    <section>
-      <input
-        type="text"
-        value={name}
-        onChange={onNameChange}
-      />
+    return (
+        <section className={styles.container}>
+            <input type="text" value={name} onChange={onNameChange} />
 
-      <h2>{name}</h2>
+            <h2>{name}</h2>
 
-      <Tracklist
-        tracks={tracks}
-        onRemove={onRemove}
-        isRemoval={true}
-      />
+            <Tracklist tracks={tracks} onRemove={onRemove} isRemoval={true} />
 
-      <button onClick={onSave}>
-        Save Playlist
-      </button>
-    </section>
-  );
+            <button className={styles.saveButton} onClick={onSave}>
+                Save Playlist
+            </button>
+        </section>
+    );
 }
 
 export default Playlist;
